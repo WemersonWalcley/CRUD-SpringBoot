@@ -18,21 +18,14 @@ public class UserService {
 
 
     public UserDTO findById(Long id){
-        User user = userRepository.findById(id).get();
-        UserDTO userDTO = new UserDTO(user);
-        return userDTO;
+        User user = userRepository.findById(id).orElse(null);
+        assert user != null;
+        return new UserDTO(user);
     }
 
     public List<UserDTO> findAll(){
         List<User> users = userRepository.findAll();
-        return convert(users);
-    }
-
-    public List<UserDTO> convert(List<User> users){
-        return users
-                .stream()
-                .map(UserDTO::new)
-                .collect(Collectors.toList());
+        return users.stream().map(UserDTO::new).collect(Collectors.toList());
     }
 
     public User postMapping(User user){
