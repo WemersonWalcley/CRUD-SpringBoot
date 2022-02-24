@@ -31,19 +31,19 @@ public class UserController {
     }
 
     @PostMapping
-    @ApiOperation(value = "Save User")
+    @ApiOperation(value = "Save_User")
     public User save(@RequestBody User user){
         return userService.postMapping(user);
     }
 
     @DeleteMapping(value = "/{id}")
-    @ApiOperation(value = "Delete User")
+    @ApiOperation(value = "Delete_User")
     public void delete(@PathVariable Long id){
         userService.deleteMapping(id);
     }
 
     @PutMapping
-    @ApiOperation(value = "Update User")
+    @ApiOperation(value = "Update_User")
     public User edit(@RequestBody User user){
         return userService.putMapping(user);
     }

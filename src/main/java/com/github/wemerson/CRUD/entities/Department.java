@@ -9,12 +9,12 @@ import javax.persistence.*;
 import javax.validation.constraints.NotBlank;
 
 @Entity
-@Table(name = "tb_departament")
+@Table(name = "tb_department")
 @Getter
 @Setter
 @NoArgsConstructor
 @Validated
-public class Departament {
+public class Department {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
