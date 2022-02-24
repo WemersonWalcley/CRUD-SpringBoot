@@ -1,6 +1,5 @@
 package com.github.wemerson.CRUD.entities;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -32,8 +31,8 @@ public class User {
     private String password;
 
     @ManyToOne
-    @JoinColumn(name = "departament_id")
-    private Departament departament;
+    @JoinColumn(name = "department_id")
+    private Department department;
 
     public User(Long id, String name, String email, String password){
         this.id = id;
