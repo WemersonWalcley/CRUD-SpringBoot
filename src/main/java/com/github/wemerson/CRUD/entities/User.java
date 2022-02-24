@@ -1,5 +1,6 @@
 package com.github.wemerson.CRUD.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
